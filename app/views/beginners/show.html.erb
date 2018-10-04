@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @beginner.title %>
+</p>
+
+<p>
+  <strong>Element:</strong>
+  <%= @beginner.element %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @beginner.author %>
+</p>
+
+<%= link_to 'Edit', edit_beginner_path(@beginner) %> |
+<%= link_to 'Back', beginners_path %>
