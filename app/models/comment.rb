@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
-  belongs_to :beginners
+  belongs_to :beginner
+  validates :text, :author, :beginner, presence: true
 end

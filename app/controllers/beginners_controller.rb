@@ -10,6 +10,7 @@ class BeginnersController < ApplicationController
   # GET /beginners/1
   # GET /beginners/1.json
   def show
+    @new_comment = @beginner.comments.new
   end
 
   # GET /beginners/new
