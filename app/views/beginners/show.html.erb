@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<div class="Beginners">
 
 <p>
   <strong>Title:</strong>
@@ -17,3 +18,30 @@
 
 <%= link_to 'Edit', edit_beginner_path(@beginner) %> |
 <%= link_to 'Back', beginners_path %>
+</div>
+</br>
+<div class="comments">
+  <table>
+    <thead>
+      <tr>
+        <th>text</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <% @story.comments.each do |comment| %>
+        <tr>
+          <td><%= comment.text %></td>
+          <td><%= comment.author %></td>
+        <tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</br>
+<div class="new_comments">
+  <%= render 'comments/form', comment: @new_comment %>
+
+</div>
