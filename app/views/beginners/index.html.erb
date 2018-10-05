@@ -19,7 +19,7 @@
         <td><%= beginner.title %></td>
         <td><%= beginner.element %></td>
         <td><%= beginner.author %></td>
-        <td><%= beginner.user.email  %></td>
+        <td><%= beginner.user&.email  %></td>
         <td><%= link_to 'Show', beginner %></td>
         <% if beginner.user == current_user %>
         <td><%= link_to 'Edit', edit_beginner_path(beginner) %></td>

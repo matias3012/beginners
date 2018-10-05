@@ -4,7 +4,7 @@ class BeginnersController < ApplicationController
   # GET /beginners
   # GET /beginners.json
   def index
-    @beginners = current_user.beginners.all
+    @beginners = Beginner.all
   end
 
   # GET /beginners/1
