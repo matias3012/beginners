@@ -1,10 +1,10 @@
 class BeginnersController < ApplicationController
   before_action :set_beginner, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /beginners
   # GET /beginners.json
   def index
-    @beginners = Beginner.all
+    @beginners = current_user.beginners.all
   end
 
   # GET /beginners/1
@@ -15,7 +15,7 @@ class BeginnersController < ApplicationController
 
   # GET /beginners/new
   def new
-    @beginner = Beginner.new
+    @beginner = current_user.beginners.new
   end
 
   # GET /beginners/1/edit
@@ -25,7 +25,7 @@ class BeginnersController < ApplicationController
   # POST /beginners
   # POST /beginners.json
   def create
-    @beginner = Beginner.new(beginner_params)
+    @beginner = current_user.beginners.new(beginner_params)
 
     respond_to do |format|
       if @beginner.save
