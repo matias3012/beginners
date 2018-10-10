@@ -117,9 +117,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    nostradamus (1.0.0)
-      activesupport (>= 5.0.0)
-      tzinfo (>= 0.3.33)
     orm_adapter (0.5.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -234,7 +231,6 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  nostradamus
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.1)

@@ -32,8 +32,6 @@
       change_name: function() {
         var vm = this;
         return vm.beginner.element = 'juancho'
-
-
       },
     }
   }
