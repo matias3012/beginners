@@ -15,11 +15,14 @@ import TurbolinksAdapter from 'vue-turbolinks'
 Vue.use(TurbolinksAdapter)
 
 import App from '../app.vue'
-Vue.component('app', App)
-
+import Bshow from '../views/beginners/showw.vue'
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '[data-behavior="vue"]',
+    components: {
+      'app': App,
+      'beginner_show': Bshow
+    }
   })
 })
